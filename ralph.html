@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ralph's Memories</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Ralph's Memories</h1>
+    <a href="index.html" class="member-button">Back to Main Page</a>
+  </header>
+
+  <main>
+    <section class="gallery" id="ralphGallery">
+      <!-- JS will insert Ralph's photos and video here -->
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Mga Kupal sa Caloocan</p>
+  </footer>
+
+  <script>
+    const ralphMemories = [
+      { type: 'image', src: 'photos.ralph/ralph1.jpg.jpg', caption: 'wHAT THE fUCK' },
+      { type: 'image', src: 'photos.ralph/ralph2.jpg', caption: 'nO fILTER 2' },
+      { type: 'image', src: 'photos.ralph/ralph3.jpg', caption: 'sTUIPID' },
+      { type: 'image', src: 'photos.ralph/ralph4.jpg', caption: 'Mugshot' },
+      { type: 'image', src: 'photos.ralph/ralph5.jpg', caption: 'Pooping' },
+      { type: 'video', src: 'photos.ralph/ralph.mp4.mp4', caption: 'Rizzlah' }
+    ];
+
+    const gallery = document.getElementById("ralphGallery");
+
+    ralphMemories.forEach(item => {
+      const div = document.createElement("div");
+      div.className = "member";
+      if (item.type === 'image') {
+        div.innerHTML = `<img src="${item.src}" alt="${item.caption}"><p>${item.caption}</p>`;
+      } else if (item.type === 'video') {
+        div.innerHTML = `<video controls width="100%"><source src="${item.src}" type="video/mp4"></video><p>${item.caption}</p>`;
+      }
+      gallery.appendChild(div);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joewhel's Memories</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Joewhel's Memories</h1>
+    <a href="index.html" class="member-button">Back to Main Page</a>
+  </header>
+
+  <main>
+    <section class="gallery" id="joewhelGallery">
+      <!-- JS will insert Joewhel's photos and video here -->
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Mga Kupal sa Caloocan</p>
+  </footer>
+
+  <script>
+    const joewhelMemories = [
+      { type: 'image', src: 'photos.jumong/jhumong.jpeg', caption: 'Nerdy boyy' },
+      { type: 'image', src: 'photos.jumong/jumong 3.jpg', caption: 'Nganga pa' },
+      { type: 'image', src: 'photos.jumong/jumong 4.jpg', caption: 'bayot' },
+      { type: 'image', src: 'photos.jumong/jumong 5.jpg', caption: 'iyak' },
+      { type: 'image', src: 'photos.jumong/jumong.jpg', caption: 'CutiePie' },
+      { type: 'video', src: 'photos.jumong/jumongD.mp4', caption: 'Dance' }
+    ];
+
+    const gallery = document.getElementById("joewhelGallery");
+
+    joewhelMemories.forEach(item => {
+      const div = document.createElement("div");
+      div.className = "member";
+      if (item.type === 'image') {
+        div.innerHTML = `<img src="${item.src}" alt="${item.caption}"><p>${item.caption}</p>`;
+      } else if (item.type === 'video') {
+        div.innerHTML = `<video controls width="100%"><source src="${item.src}" type="video/mp4"></video><p>${item.caption}</p>`;
+      }
+      gallery.appendChild(div);
+    });
+  </script>
+</body>
+</html>

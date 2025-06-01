@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mga Kupal sa Caloocan</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Mga Kupal sa Caloocan</h1>
+  </header>
+
+  <main>
+    <section class="gallery">
+      <!-- Ralph -->
+      <div class="member">
+        <img src="photos.ralph/Ralph pgi.jpg" alt="Ralph" />
+        <h2>Ralph</h2>
+        <button onclick="goToPage('ralph.html')">Tignan ang mga kakupalan</button>
+      </div>
+
+      <!-- Joewhel -->
+      <div class="member">
+        <img src="photos.jumong/Jumong 2.jpg" alt="Joewhel" />
+        <h2>Joewhel</h2>
+        <button onclick="goToPage('joewhel.html')">Tignan ang mga kakupalan</button>
+      </div>
+
+      <!-- Rhea -->
+      <div class="member">
+        <img src="photos.rhea/rhea.jpg" alt="Rhea" />
+        <h2>Rhea</h2>
+        <button onclick="goToPage('rhea.html')">Tignan ang mga kakupalan</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Mga Kupal sa Caloocan</p>
+  </footer>
+
+  <script>
+    function goToPage(page) {
+      window.location.href = page;
+    }
+  </script>
+</body>
+</html>
